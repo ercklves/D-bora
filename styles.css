@@ -1,0 +1,100 @@
+ Corpo e página 
+body {
+    font-family 'Poppins', sans-serif;
+    display flex;
+    justify-content center;
+    align-items center;
+    height 100vh;
+    margin 0;
+    background-color #ffe6f2;  Fundo rosa suave 
+    padding 10px;
+}
+
+ Estilo para cada página 
+.page {
+    display none;  Oculta as páginas por padrão 
+    max-width 100%;
+    padding 20px;
+    background-color white;
+    box-shadow 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius 10px;
+    text-align justify;
+}
+
+.page.active {
+    display block;  Exibe a página ativa 
+}
+
+ Estilo do título 
+h1 {
+    font-size 2.5rem;
+    text-align center;
+    color #ff6699;  Cor rosa para combinar com o tema 
+    margin 0;
+}
+
+ Estilo para a última página 
+#page-4 p {
+    font-size 2rem;
+    color #ff3366;  Cor destacada para Te amo, tá 
+    text-align center;
+    font-weight 600;
+}
+
+ Navegação 
+.navigation {
+    margin-top 20px;
+    text-align center;
+}
+
+ Estilo dos botões 
+button {
+    padding 10px 20px;
+    margin 5px;
+    font-size 16px;
+    cursor pointer;
+    border none;
+    border-radius 25px;
+    background-color #ff6699;  Cor rosa suave para os botões 
+    color white;
+    box-shadow 0 4px 6px rgba(0, 0, 0, 0.1);  Sombra para dar destaque 
+    transition background-color 0.3s ease, transform 0.2s ease;
+}
+
+buttonhover {
+    background-color #e55d85;
+    transform scale(1.05);  Aumenta ligeiramente ao passar o mouse 
+}
+
+buttondisabled {
+    opacity 0.5;
+    cursor not-allowed;
+}
+
+ Responsividade para smartphones 
+@media (max-width 600px) {
+    body {
+        flex-direction column;
+        padding 20px;
+    }
+
+    .page {
+        width 100%;
+        font-size 16px;
+    }
+
+    h1 {
+        font-size 2rem;
+    }
+
+    button {
+        width 100%;
+        font-size 18px;
+    }
+
+    .navigation {
+        display flex;
+        flex-direction column;
+        gap 10px;
+    }
+}

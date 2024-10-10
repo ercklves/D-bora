@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uma carta para Débora</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> <!-- Fonte cursiva -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFC0CB; /* Fundo rosa */
+            color: #333;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .page {
+            display: none; /* Esconde todas as páginas inicialmente */
+        }
+        .active {
+            display: block; /* Mostra apenas a página ativa */
+        }
+        .navigation {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #e0e0e0;
+        }
+        h1 {
+            font-family: 'Great Vibes', cursive; /* Fonte cursiva para o título */
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.5em;
+        }
+        .cursive {
+            font-family: 'Great Vibes', cursive; /* Fonte cursiva para trechos específicos */
+        }
+        #page-13 p {
+            font-weight: bold; /* Destaque para a última página */
+            font-size: 2.5em; /* Aumentar o tamanho da fonte para a última página */
+        }
+    </style>
+</head>
+<body>
+    <!-- Adicionando a música de fundo -->
+    <audio source src="musica.mp3" type="audio/mpeg" autoplay="autoplay" loop="True" >
+        Seu navegador não suporta áudio.
+    </audio>
+
+    <!-- Páginas -->
+    <div class="page active" id="page-1">
+        <h1>Uma carta para Débora</h1>
+    </div>
+    <div class="page" id="page-2">
+        <p>Desde pequeno, quando pouco entendia, oro pelo amor da minha vida, mesmo sem entender o que era amar uma pessoa.</p>
+    </div>
+    <div class="page" id="page-3">
+        <p>E busquei até aqui a pessoa que Deus havia separado pra que eu pudesse entregar o meu amor.</p>
+    </div>
+    <div class="page" id="page-4">
+        <p>Agora que ela está na minha frente, vejo o quanto Deus tem cuidado de mim.</p>
+    </div>
+    <div class="page" id="page-5">
+        <p>Porque Ele confiou a mim a mulher mais linda do mundo, com o sorriso e os olhos mais perfeitos.</p>
+    </div>
+    <div class="page" id="page-6">
+        <p>Com você, pude saber o que verdadeiramente é o amor. Amor esse que tem sido fortalecido pelo Senhor.</p>
+    </div>
+    <div class="page" id="page-7">
+        <p>Porque para mim, depois do Senhor, essa é a maior e melhor decisão da minha vida.</p>
+    </div>
+    <div class="page" id="page-8">
+        <p>Hoje, eu sei o quanto valeu a pena passar por cada dificuldade.</p>
+        <p class="cursive">Porque o amor tudo sofre.</p> <!-- Texto em fonte cursiva -->
+    </div>
+    <div class="page" id="page-9">
+        <p>O Senhor Deus nos fez promessas durante toda a nossa vida, sobre o que nós viveríamos, e nós cremos.</p>
+        <p class="cursive">O amor tudo crê.</p> <!-- Texto em fonte cursiva -->
+    </div>
+    <div class="page" id="page-10">
+        <p>Não será fácil. Ainda temos muito, mas muito para conquistar. Mas Aquele em quem esperamos é maior do que nossas ansiedades.</p>
+        <p class="cursive">O amor tudo espera.</p> <!-- Texto em fonte cursiva -->
+    </div>
+    <div class="page" id="page-11">
+        <p>Suportaremos todas as dificuldades que ainda virão, porque Ele é conosco, meu amor.</p>
+        <p class="cursive">O amor tudo suporta.</p> <!-- Texto em fonte cursiva -->
+    </div>
+    <div class="page" id="page-12">
+        <p>E nisso, Débora, vivemos um sonho, para nós dois:</p>
+        <p class="cursive">A construção de um lar.</p> <!-- Texto em fonte cursiva -->
+    </div>
+    <div class="page" id="page-13">
+        <p>É isso que você vai encontrar em mim, de hoje em diante:</p>
+        <p class="cursive">Um lar!</p> <!-- Texto em fonte cursiva -->
+        <p class="cursive">Te amo, tá?</p> <!-- Texto em fonte cursiva -->
+    </div>
+
+    <!-- Navegação entre páginas -->
+    <div class="navigation">
+        <button onclick="prevPage()">Anterior</button>
+        <button onclick="nextPage()">Próximo</button>
+    </div>
+
+    <script>
+        let currentPage = 0;
+        const pages = document.querySelectorAll('.page');
+        pages[currentPage].classList.add('active');
+
+        function showPage(index) {
+            pages.forEach((page, i) => {
+                page.classList.remove('active');
+                if (i === index) {
+                    page.classList.add('active');
+                }
+            });
+        }
+
+        function nextPage() {
+            if (currentPage < pages.length - 1) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 0) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        }
+    </script>
+</body>
+</html>
