@@ -7,58 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> <!-- Fonte cursiva -->
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #FFC0CB; /* Fundo rosa */
-            color: #333;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-        }
-        .page {
-            display: none; /* Esconde todas as páginas inicialmente */
-        }
-        .active {
-            display: block; /* Mostra apenas a página ativa */
-        }
-        .navigation {
-            margin-top: 20px;
-        }
-        button {
-            padding: 10px 20px;
-            margin: 0 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #fff;
-            color: #333;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #e0e0e0;
-        }
-        h1 {
-            font-family: 'Great Vibes', cursive; /* Fonte cursiva para o título */
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 1.2em;
-            line-height: 1.5em;
-        }
-        .cursive {
-            font-family: 'Great Vibes', cursive; /* Fonte cursiva para trechos específicos */
-        }
-        #page-13 p {
-            font-weight: bold; 
-            font-size: 2.5em; 
-        }
-    </style>
 </head>
 <body>
     <!-- Adicionando a música de fundo -->
@@ -116,9 +64,10 @@
 
     <!-- Navegação entre páginas -->
     <div class="navigation">
-        <button onclick="prevPage()">Anterior</button>
-        <button onclick="nextPage()">Próximo</button>
+        <button onclick="prevPage()"><span class="text">Anterior</span></button> 
+        <button onclick="nextPage()"><span class="text">Proximo</span></button>
     </div>
+
 
     <script>
         let currentPage = 0;
